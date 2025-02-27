@@ -1,6 +1,4 @@
-from TemplateMethod.order import Order
-from TemplateMethod.models import PaypalAccount
-
+from orders.order import Order
 
 class PaypalOrder(Order):
 

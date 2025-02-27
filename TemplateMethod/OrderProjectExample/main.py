@@ -11,16 +11,14 @@ Genel Sipariş Akışı:
     Siparişi tamamla
 
 """
-
-from TemplateMethod.models.account import PaypalAccount
-from TemplateMethod.paypal_order import PaypalOrder
-
+from accounts.paypal_account import PaypalAccount
+from orders.paypal_order import PaypalOrder
 
 def main():
     account = PaypalAccount(5000)
     print("Account is created")
     order = PaypalOrder(account)
-    order.place_order()
+    order.place_order(500)
 
 if __name__ == "__main__":
     main()
